@@ -281,16 +281,16 @@ function PinoyCheck() {
                     <li class = "schoolYear">
                     <input id="fromYear" name="fromYear" type="number" min="<?php echo $yearNow-1 ?>" max="<?php echo $yearNow ?>" value="<?php echo (isset($fromYear)) ? "$fromYear" :'' ?>" required> to
                     <input id="toYear" name="toYear" type="number" min="<?php echo $yearNow ?>" max="<?php echo $yearNow+1 ?>" value="<?php echo (isset($toYear)) ? "$toYear" :'' ?>" required>
-                    <input id="LRN" name="LRN" type="text" placeholder="LRN" maxlength="12" value="<?php echo (isset($lrn)) ? "$lrn" :'' ?>" required> 
+                    <input id="LRN" name="LRN" type="text" placeholder="LRN" pattern="\d*" maxlength="12" value="<?php echo (isset($lrn)) ? "$lrn" :'' ?>" required> 
                     </li>
                     <li class="categories">Name of Student</li>
                     <li class="StudName">
                         <!-- <label class='input-label' for="lastName">Lastname</label>  -->
-                        <input id="lastName" name="lastName" type="text" placeholder="Lastname" value="<?php echo (isset($last)) ? "$last" :'' ?>" onkeypress="javascript:this.value=this.value.toUpperCase();" required> 
+                        <input id="lastName" name="lastName" type="text" placeholder="Lastname" value="<?php echo (isset($last)) ? "$last" :'' ?>" onkeyup="javascript:this.value=this.value.toUpperCase();" required> 
                         <!-- <label class='input-label' for="firstName">Firstname</label>  -->
-                        <input id="firstName" name="firstName" type="text" placeholder="Firstname" value="<?php echo (isset($first)) ? "$first" :'' ?>" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
+                        <input id="firstName" name="firstName" type="text" placeholder="Firstname" value="<?php echo (isset($first)) ? "$first" :'' ?>" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
                         <!-- <label class='input-label' for="MunTowCity">MunTowCity</label>  -->
-                        <input id="MiddleName" name="MiddleName" type="text" placeholder="Middlename" value="<?php echo (isset($middle)) ? "$middle" :'' ?>" onkeypress="javascript:this.value=this.value.toUpperCase();" required> 
+                        <input id="MiddleName" name="MiddleName" type="text" placeholder="Middlename" value="<?php echo (isset($middle)) ? "$middle" :'' ?>" onkeyup="javascript:this.value=this.value.toUpperCase();" required> 
                     </li>
                     <li class="categories">Gender</li>
                     <!-- <li style="display:none">   
@@ -311,8 +311,8 @@ function PinoyCheck() {
                     </li>
                     <li class="categories">Place of Birth</li>
                     <li class="BirthPlace">
-                        <input id="MunTowCity" name="MunTowCity" type="text" placeholder="Municipality/Town/City" value="<?php echo (isset($birthMunTowCity)) ? "$birthMunTowCity" :'' ?>" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
-                        <input id="Province" name="Province" type="text" placeholder="Province" value="<?php echo (isset($birthProvince)) ? "$birthProvince" :'' ?>" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
+                        <input id="MunTowCity" name="MunTowCity" type="text" placeholder="Municipality/Town/City" value="<?php echo (isset($birthMunTowCity)) ? "$birthMunTowCity" :'' ?>" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
+                        <input id="Province" name="Province" type="text" placeholder="Province" value="<?php echo (isset($birthProvince)) ? "$birthProvince" :'' ?>" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
                     </li>
                     <li class="categories">Citizenship</li>
                     <li>
@@ -326,10 +326,10 @@ function PinoyCheck() {
                     </li>
                     <div id="ifNONFil" style="<?php echo ($citizen!='FILIPINO') ? 'display:block' :'display:none' ?>">
                         <li>
-                        <input id="NonFil" name="NonFil" type="text" placeholder="(Specify Citizenship)" value="<?php echo ($citizen!='FILIPINO') ? "$citizen" :'' ?>" onkeypress="javascript:this.value=this.value.toUpperCase();" > 
+                        <input id="NonFil" name="NonFil" type="text" placeholder="(Specify Citizenship)" value="<?php echo ($citizen!='FILIPINO') ? "$citizen" :'' ?>" onkeyup="javascript:this.value=this.value.toUpperCase();" > 
                         </li>
                         <li>
-                        <input id="VisaType" name="VisaType" type="text" placeholder="Visa Type" value="<?php echo (isset($visaType)) ? "$visaType" :'' ?>" onkeypress="javascript:this.value=this.value.toUpperCase();" > 
+                        <input id="VisaType" name="VisaType" type="text" placeholder="Visa Type" value="<?php echo (isset($visaType)) ? "$visaType" :'' ?>" onkeyup="javascript:this.value=this.value.toUpperCase();" > 
                         Issued in: <input id="VisaIssuedIn" name="VisaIssuedIn" type="date" value="<?php echo (isset($visaIssuedIn)) ? "$visaIssuedIn" :'' ?>" > 
                         Expiration: <input id="VExpiration" name="VExpiration" type="date" value="<?php echo (isset($visaExpire)) ? "$visaExpire" :'' ?>" > 
                         </li>
@@ -340,7 +340,7 @@ function PinoyCheck() {
                         </li>
                     </div>
                     <li id ="ifFIL" style="<?php echo ($citizen=='FILIPINO') ? 'display:block' :'display:none' ?>">
-                        <input id="CompleteAddress" name="CompleteAddress" type="text" placeholder="Complete Address" value="<?php echo (isset($CompleteAddress)) ? "$CompleteAddress" :'' ?>" onkeypress="javascript:this.value=this.value.toUpperCase();" >
+                        <input id="CompleteAddress" name="CompleteAddress" type="text" placeholder="Complete Address" value="<?php echo (isset($CompleteAddress)) ? "$CompleteAddress" :'' ?>" onkeyup="javascript:this.value=this.value.toUpperCase();" >
                         <input id="ContactNo" name="ContactNo" type="text" placeholder="Contact No#" pattern="\d*" maxlength="11" value="<?php echo (isset($ContactNo)) ? "$ContactNo" :'' ?>" >
                     </li>
                     <li class="categories">Religious Affiliation</li>
@@ -356,64 +356,64 @@ function PinoyCheck() {
                         }
                     ?>
                     <li id="ifNONINC" style="<?php echo ($religion!='INC') ? 'display:block' :'display:none' ?>">
-                        <input id="Religion" name="Religion" type="text" placeholder="(Specify Religion)" value="<?php echo ($religion!='INC') ? "$religion" :'' ?>" onkeypress="javascript:this.value=this.value.toUpperCase();" >
+                        <input id="Religion" name="Religion" type="text" placeholder="(Specify Religion)" value="<?php echo ($religion!='INC') ? "$religion" :'' ?>" onkeyup="javascript:this.value=this.value.toUpperCase();" >
                         <div class="parents">INC member who recommended the applicant: </div>
                         <div>
-                        <input id="INCRecommendName" name="INCRecommendName" type="text" placeholder="Fullname" value="<?php echo (isset($incRecName)) ? "$incRecName" :'' ?>" onkeypress="javascript:this.value=this.value.toUpperCase();" > 
-                        <input id="INCRecommendAddress" name="INCRecommendAddress" type="text" placeholder="Address" value="<?php echo (isset($incRecAddress)) ? "$incRecAddress" :'' ?>" onkeypress="javascript:this.value=this.value.toUpperCase();" >
+                        <input id="INCRecommendName" name="INCRecommendName" type="text" placeholder="Fullname" value="<?php echo (isset($incRecName)) ? "$incRecName" :'' ?>" onkeyup="javascript:this.value=this.value.toUpperCase();" > 
+                        <input id="INCRecommendAddress" name="INCRecommendAddress" type="text" placeholder="Address" value="<?php echo (isset($incRecAddress)) ? "$incRecAddress" :'' ?>" onkeyup="javascript:this.value=this.value.toUpperCase();" >
                         <input id="INCRecommendContactNo" name="INCRecommendContactNo" type="text" placeholder="Contact No" pattern="\d*" maxlength="11" value="<?php echo (isset($incRecNo)) ? "$incRecNo" :'' ?>" >
                         </div>
                     </li>
                     <li id="ifINC" style="<?php echo ($religion=='INC') ? 'display:block' :'display:none' ?>">
-                        <input id="Area" name="Area" type="text" placeholder="Area" value="<?php echo (isset($incArea)) ? "$incArea" :'' ?>" onkeypress="javascript:this.value=this.value.toUpperCase();">
-                        <input id="Group" name="Group" type="text" placeholder="Group" value="<?php echo (isset($incGroup)) ? "$incGroup" :'' ?>" onkeypress="javascript:this.value=this.value.toUpperCase();">
-                        <input id="Locale" name="Locale" type="text" placeholder="Locale" value="<?php echo (isset($incLocale)) ? "$incLocale" :'' ?>" onkeypress="javascript:this.value=this.value.toUpperCase();">
-                        <input id="District" name="District" type="text" placeholder="District" value="<?php echo (isset($incDistrict)) ? "$incDistrict" :'' ?>" onkeypress="javascript:this.value=this.value.toUpperCase();">                                        
+                        <input id="Area" name="Area" type="text" placeholder="Area" value="<?php echo (isset($incArea)) ? "$incArea" :'' ?>" onkeyup="javascript:this.value=this.value.toUpperCase();">
+                        <input id="Group" name="Group" type="text" placeholder="Group" value="<?php echo (isset($incGroup)) ? "$incGroup" :'' ?>" onkeyup="javascript:this.value=this.value.toUpperCase();">
+                        <input id="Locale" name="Locale" type="text" placeholder="Locale" value="<?php echo (isset($incLocale)) ? "$incLocale" :'' ?>" onkeyup="javascript:this.value=this.value.toUpperCase();">
+                        <input id="District" name="District" type="text" placeholder="District" value="<?php echo (isset($incDistrict)) ? "$incDistrict" :'' ?>" onkeyup="javascript:this.value=this.value.toUpperCase();">                                        
                     </li>
                     </li>
                     <li class="categories">Last School Attended</li>
                     <li class="LastSchool">
-                        <input id="LastSchoolName" name="LastSchoolName" type="text" placeholder="Complete School Name" value="<?php echo (isset($lastSchoolName)) ? "$lastSchoolName" :'' ?>" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
+                        <input id="LastSchoolName" name="LastSchoolName" type="text" placeholder="Complete School Name" value="<?php echo (isset($lastSchoolName)) ? "$lastSchoolName" :'' ?>" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
                         <input id="LastSchoolYear" name="LastSchoolYear" type="text" placeholder="School Year" value="<?php echo (isset($lastYear)) ? "$lastYear" :'' ?>" required>
-                        <input id="GradeLevel" name="GradeLevel" type="text" placeholder="Grade/Year Level" value="<?php echo (isset($lastGradeLevel)) ? "$lastGradeLevel" :'' ?>" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
+                        <input id="GradeLevel" name="GradeLevel" type="text" placeholder="Grade/Year Level" value="<?php echo (isset($lastGradeLevel)) ? "$lastGradeLevel" :'' ?>" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
                     </li>
                     <li>
-                    <input id="LastSchoolAddress" name="LastSchoolAddress" type="text" placeholder="Complete School Address" value="<?php echo (isset($lastAddress)) ? "$lastAddress" :'' ?>" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
+                    <input id="LastSchoolAddress" name="LastSchoolAddress" type="text" placeholder="Complete School Address" value="<?php echo (isset($lastAddress)) ? "$lastAddress" :'' ?>" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
                     </li>
                     <li class="categories">Parents</li>
                     <li class="parents">Father</li>
                     <li class="FatherInfo">
-                        <input id="FatherName" name="FatherName" type="text" placeholder="Fullname" value="<?php echo (isset($fatherName)) ? "$fatherName" :'' ?>" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
+                        <input id="FatherName" name="FatherName" type="text" placeholder="Fullname" value="<?php echo (isset($fatherName)) ? "$fatherName" :'' ?>" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
                         <input id="FatherContactNo" name="FatherContactNo" type="text" placeholder="Contact No#" pattern="\d*" maxlength="11" value="<?php echo (isset($fatherContact)) ? "$fatherContact" :'' ?>" required>
-                        <input id="FatherReligion" name="FatherReligion" type="text" placeholder="Religion" value="<?php echo (isset($fatherReligion)) ? "$fatherReligion" :'' ?>" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
-                        <input id="FatherLocale" name="FatherLocale" type="text" placeholder="Locale" value="<?php echo (isset($fatherLocale)) ? "$fatherLocale" :'' ?>" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
+                        <input id="FatherReligion" name="FatherReligion" type="text" placeholder="Religion" value="<?php echo (isset($fatherReligion)) ? "$fatherReligion" :'' ?>" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
+                        <input id="FatherLocale" name="FatherLocale" type="text" placeholder="Locale" value="<?php echo (isset($fatherLocale)) ? "$fatherLocale" :'' ?>" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
                     </li>
                     <li>
-                    <input id="FatherAddress" name="FatherAddress" type="text" placeholder="Complete Address" value="<?php echo (isset($fatherAddress)) ? "$fatherAddress" :'' ?>" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
+                    <input id="FatherAddress" name="FatherAddress" type="text" placeholder="Complete Address" value="<?php echo (isset($fatherAddress)) ? "$fatherAddress" :'' ?>" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
                     </li>
                     <li>
-                        <input id="FatherOccupation" name="FatherOccupation" type="text" placeholder="Occupation" value="<?php echo (isset($fatherOccupation)) ? "$fatherOccupation" :'' ?>" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
+                        <input id="FatherOccupation" name="FatherOccupation" type="text" placeholder="Occupation" value="<?php echo (isset($fatherOccupation)) ? "$fatherOccupation" :'' ?>" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
                         <input id="FatherWorkContactNo" name="FatherWorkContactNo" type="text" placeholder="Work Contact No#" pattern="\d*" maxlength="11" value="<?php echo (isset($fatherWorkContactNo)) ? "$fatherWorkContactNo" :'' ?>" required>                    
                     </li>
                     <li>
-                        <input id="FatherWorkAddress" name="FatherWorkAddress" type="text" placeholder="Work Address" value="<?php echo (isset($fatherWorkAddress)) ? "$fatherWorkAddress" :'' ?>" onkeypress="javascript:this.value=this.value.toUpperCase();" required>                    
+                        <input id="FatherWorkAddress" name="FatherWorkAddress" type="text" placeholder="Work Address" value="<?php echo (isset($fatherWorkAddress)) ? "$fatherWorkAddress" :'' ?>" onkeyup="javascript:this.value=this.value.toUpperCase();" required>                    
                     </li>
                     <li class="parents">Mother</li>
                     <li class="MotherInfo">
-                        <input id="MotherName" name="MotherName" type="text" placeholder="Fullname" value="<?php echo (isset($motherName)) ? "$motherName" :'' ?>" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
+                        <input id="MotherName" name="MotherName" type="text" placeholder="Fullname" value="<?php echo (isset($motherName)) ? "$motherName" :'' ?>" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
                         <input id="MotherContactNo" name="MotherContactNo" type="text" placeholder="Contact No#" pattern="\d*" maxlength="11" value="<?php echo (isset($motherContact)) ? "$motherContact" :'' ?>" required>
-                        <input id="MotherReligion" name="MotherReligion" type="text" placeholder="Religion" value="<?php echo (isset($motherReligion)) ? "$motherReligion" :'' ?>" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
-                        <input id="MotherLocale" name="MotherLocale" type="text" placeholder="Locale" value="<?php echo (isset($motherLocale)) ? "$motherLocale" :'' ?>" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
+                        <input id="MotherReligion" name="MotherReligion" type="text" placeholder="Religion" value="<?php echo (isset($motherReligion)) ? "$motherReligion" :'' ?>" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
+                        <input id="MotherLocale" name="MotherLocale" type="text" placeholder="Locale" value="<?php echo (isset($motherLocale)) ? "$motherLocale" :'' ?>" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
                     </li>
                     <li>
-                        <input id="MotherAddress" name="MotherAddress" type="text" placeholder="Complete Address" value="<?php echo (isset($motherAddress)) ? "$motherAddress" :'' ?>" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
+                        <input id="MotherAddress" name="MotherAddress" type="text" placeholder="Complete Address" value="<?php echo (isset($motherAddress)) ? "$motherAddress" :'' ?>" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
                     </li>
                     <li>
-                        <input id="MotherOccupation" name="MotherOccupation" type="text" placeholder="Occupation" value="<?php echo (isset($motherOccupation)) ? "$motherOccupation" :'' ?>"onkeypress="javascript:this.value=this.value.toUpperCase();" required>
+                        <input id="MotherOccupation" name="MotherOccupation" type="text" placeholder="Occupation" value="<?php echo (isset($motherOccupation)) ? "$motherOccupation" :'' ?>"onkeyup="javascript:this.value=this.value.toUpperCase();" required>
                         <input id="MotherWorkContactNo" name="MotherWorkContactNo" type="text" placeholder="Work Contact No#" pattern="\d*" maxlength="11" value="<?php echo (isset($motherWorkContactNo)) ? "$motherWorkContactNo" :'' ?>" required>                    
                     </li>
                     <li>
-                        <input id="MotherWorkAddress" name="MotherWorkAddress" type="text" placeholder="Work Address" value="<?php echo (isset($motherWorkAddress)) ? "$motherWorkAddress" :'' ?>" onkeypress="javascript:this.value=this.value.toUpperCase();" required>                    
+                        <input id="MotherWorkAddress" name="MotherWorkAddress" type="text" placeholder="Work Address" value="<?php echo (isset($motherWorkAddress)) ? "$motherWorkAddress" :'' ?>" onkeyup="javascript:this.value=this.value.toUpperCase();" required>                    
                     </li>                    
                     <li class="submitton">
                     <button class="btn" type="submit" name="submit" name="action">Submit</button>

@@ -151,16 +151,16 @@ function PinoyCheck() {
                     <li class = "schoolYear">
                     <input id="fromYear" name="fromYear" type="number" min="<?php echo $yearNow-1 ?>" max="<?php echo $yearNow ?>" value="<?php echo $yearNow ?>" placeholder="From" required> to
                     <input id="toYear" name="toYear" type="number" min="<?php echo $yearNow ?>" max="<?php echo $yearNow+1 ?>" value="<?php echo $yearNow+1 ?>" placeholder="To" required>
-                    <input id="LRN" name="LRN" type="text" placeholder="LRN" maxlength="12" required> 
+                    <input id="LRN" name="LRN" type="text" placeholder="LRN" pattern="\d*" maxlength="12"> 
                     </li>
                     <li class="categories">Name of Student</li>
                     <li class="StudName">
                         <!-- <label class='input-label' for="lastName">Lastname</label>  -->
-                        <input id="lastName" name="lastName" type="text" placeholder="Lastname" onkeypress="javascript:this.value=this.value.toUpperCase();" required> 
+                        <input id="lastName" name="lastName" type="text" placeholder="Lastname" onkeyup="javascript:this.value=this.value.toUpperCase();" required> 
                         <!-- <label class='input-label' for="firstName">Firstname</label>  -->
-                        <input id="firstName" name="firstName" type="text" placeholder="First fuckin name" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
+                        <input id="firstName" name="firstName" type="text" placeholder="First fuckin name" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
                         <!-- <label class='input-label' for="MunTowCity">MunTowCity</label>  -->
-                        <input id="MiddleName" name="MiddleName" type="text" placeholder="Middlename" onkeypress="javascript:this.value=this.value.toUpperCase();" required> 
+                        <input id="MiddleName" name="MiddleName" type="text" placeholder="Middlename" onkeyup="javascript:this.value=this.value.toUpperCase();" required> 
                     </li>
                     <li class="categories">Gender</li>
                     <!-- <li style="display:none">   
@@ -176,8 +176,8 @@ function PinoyCheck() {
                     </li>
                     <li class="categories">Place of Birth</li>
                     <li class="BirthPlace">
-                        <input id="MunTowCity" name="MunTowCity" type="text" placeholder="Municipality/Town/City" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
-                        <input id="Province" name="Province" type="text" placeholder="Province" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
+                        <input id="MunTowCity" name="MunTowCity" type="text" placeholder="Municipality/Town/City" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
+                        <input id="Province" name="Province" type="text" placeholder="Province" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
                     </li>
                     <li class="categories">Citizenship</li>
                     <li>
@@ -186,10 +186,10 @@ function PinoyCheck() {
                     </li>
                     <div id="ifNONFil" style="display:none">
                         <li>
-                        <input id="NonFil" name="NonFil" type="text" placeholder="(Specify Citizenship)" onkeypress="javascript:this.value=this.value.toUpperCase();" required> 
+                        <input id="NonFil" name="NonFil" type="text" placeholder="(Specify Citizenship)" onkeyup="javascript:this.value=this.value.toUpperCase();" required> 
                         </li>
                         <li>
-                        <input id="VisaType" name="VisaType" type="text" placeholder="Visa Type" onkeypress="javascript:this.value=this.value.toUpperCase();" required> 
+                        <input id="VisaType" name="VisaType" type="text" placeholder="Visa Type" onkeyup="javascript:this.value=this.value.toUpperCase();" required> 
                         Issued in: <input id="VisaIssuedIn" name="VisaIssuedIn" type="date" required> 
                         Expiration: <input id="VExpiration" name="VExpiration" type="date" required> 
                         </li>
@@ -200,7 +200,7 @@ function PinoyCheck() {
                         </li>
                     </div>
                     <li id ="ifFIL" style="display:none">
-                        <input id="CompleteAddress" name="CompleteAddress" type="text" placeholder="Complete Address" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
+                        <input id="CompleteAddress" name="CompleteAddress" type="text" placeholder="Complete Address" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
                         <input id="ContactNo" name="ContactNo" type="text" pattern="\d*" maxlength="11" placeholder="Contact No#" required>
                     </li>
                     <li class="categories">Religious Affiliation</li>
@@ -211,64 +211,68 @@ function PinoyCheck() {
                         <input type="radio" id ="INC" onclick="javascript:INCcheck();" name="RReligion" value="INC" required>INC
                         <input type="radio" id="NONINC" onclick="javascript:INCcheck();" name="RReligion" value="NON INC">NON INC
                     <li id="ifNONINC" style="display:none">
-                        <input id="Religion" name="Religion" type="text" placeholder="(Specify Religion)" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
+                        <input id="Religion" name="Religion" type="text" placeholder="(Specify Religion)" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
                         <div class="parents">INC member who recommended the applicant: </div>
                         <div>
-                        <input id="INCRecommendName" name="INCRecommendName" type="text" placeholder="Fullname" onkeypress="javascript:this.value=this.value.toUpperCase();" required> 
-                        <input id="INCRecommendAddress" name="INCRecommendAddress" type="text" placeholder="Address" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
-                        <input id="INCRecommendContactNo" name="INCRecommendContactNo" type="text" pattern="\d*" maxlength="11" placeholder="Contact No" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
+                        <input id="INCRecommendName" name="INCRecommendName" type="text" placeholder="Fullname" onkeyup="javascript:this.value=this.value.toUpperCase();" required> 
+                        <input id="INCRecommendAddress" name="INCRecommendAddress" type="text" placeholder="Address" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
+                        <input id="INCRecommendContactNo" name="INCRecommendContactNo" type="text" pattern="\d*" maxlength="11" placeholder="Contact No" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
                         </div>
                     </li>
                     <li id="ifINC" style="display:none">
-                        <input id="Area" name="Area" type="text" placeholder="Area" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
-                        <input id="Group" name="Group" type="text" placeholder="Group" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
-                        <input id="Locale" name="Locale" type="text" placeholder="Locale" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
-                        <input id="District" name="District" type="text" placeholder="District" onkeypress="javascript:this.value=this.value.toUpperCase();" required>                                        
+                        <input id="Area" name="Area" type="text" placeholder="Area" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
+                        <input id="Group" name="Group" type="text" placeholder="Group" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
+                        <input id="Locale" name="Locale" type="text" placeholder="Locale" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
+                        <input id="District" name="District" type="text" placeholder="District" onkeyup="javascript:this.value=this.value.toUpperCase();" required>                                        
                     </li>
                     </li>
                     <li class="categories">Last School Attended</li>
                     <li class="LastSchool">
-                        <input id="LastSchoolName" name="LastSchoolName" type="text" placeholder="Complete School Name" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
+                        <input id="LastSchoolName" name="LastSchoolName" type="text" placeholder="Complete School Name" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
                         <input id="LastSchoolYear" name="LastSchoolYear" type="text" placeholder="School Year (e.g., 2019-2020)" pattern="^\d+(?:-\d+)*$" required>
-                        <input id="GradeLevel" name="GradeLevel" type="text" placeholder="Grade/Year Level" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
+                        <input id="GradeLevel" name="GradeLevel" type="text" placeholder="Grade/Year Level" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
                     </li>
                     <li>
-                    <input id="LastSchoolAddress" name="LastSchoolAddress" type="text" placeholder="Complete School Address" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
+                    <input id="LastSchoolAddress" name="LastSchoolAddress" type="text" placeholder="Complete School Address" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
                     </li>
                     <li class="categories">Parents</li>
                     <li class="parents">Father</li>
                     <li class="FatherInfo">
-                        <input id="FatherName" name="FatherName" type="text" placeholder="Fullname" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
+                        <input id="FatherName" name="FatherName" type="text" placeholder="Fullname" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
                         <input id="FatherContactNo" name="FatherContactNo" type="text" pattern="\d*" maxlength="11" placeholder="Contact No#" required>
-                        <input id="FatherReligion" name="FatherReligion" type="text" placeholder="Religion" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
-                        <input id="FatherLocale" name="FatherLocale" type="text" placeholder="Locale" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
+                        <input id="FatherReligion" name="FatherReligion" type="text" placeholder="Religion" onkeyup="javascript:this.value=this.value.toUpperCase(); javascript:if(this.value=='INC' || this.value=='IGLESIA NI CRISTO'){document.getElementById('FLocaleDis').style.display = 'inline'; document.getElementById('FatherLocale').required = true;}else{document.getElementById('FLocaleDis').style.display = 'none'; document.getElementById('FatherLocale').required = false;}" required>
+                        <span id="FLocaleDis" style="display:none">
+                        <input id="FatherLocale" name="FatherLocale" type="text" placeholder="Locale" onkeyup="javascript:this.value=this.value.toUpperCase();" required>                        
+                        </span>
                     </li>
                     <li>
-                    <input id="FatherAddress" name="FatherAddress" type="text" placeholder="Complete Address" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
+                    <input id="FatherAddress" name="FatherAddress" type="text" placeholder="Complete Address" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
                     </li>
                     <li>
-                        <input id="FatherOccupation" name="FatherOccupation" type="text" placeholder="Occupation" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
+                        <input id="FatherOccupation" name="FatherOccupation" type="text" placeholder="Occupation" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
                         <input id="FatherWorkContactNo" name="FatherWorkContactNo"  type="text" pattern="\d*" maxlength="11" placeholder="Work Contact No#" required>                    
                     </li>
                     <li>
-                        <input id="FatherWorkAddress" name="FatherWorkAddress" type="text" placeholder="Work Address" onkeypress="javascript:this.value=this.value.toUpperCase();" required>                    
+                        <input id="FatherWorkAddress" name="FatherWorkAddress" type="text" placeholder="Work Address" onkeyup="javascript:this.value=this.value.toUpperCase();" required>                    
                     </li>
                     <li class="parents">Mother</li>
                     <li class="MotherInfo">
-                        <input id="MotherName" name="MotherName" type="text" placeholder="Fullname" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
+                        <input id="MotherName" name="MotherName" type="text" placeholder="Fullname" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
                         <input id="MotherContactNo" name="MotherContactNo" type="text" pattern="\d*" maxlength="11" placeholder="Contact No#" required>
-                        <input id="MotherReligion" name="MotherReligion" type="text" placeholder="Religion" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
-                        <input id="MotherLocale" name="MotherLocale" type="text" placeholder="Locale" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
+                        <input id="MotherReligion" name="MotherReligion" type="text" placeholder="Religion" onkeyup="javascript:this.value=this.value.toUpperCase(); javascript:if(this.value=='INC' || this.value=='IGLESIA NI CRISTO'){document.getElementById('MLocaleDis').style.display = 'inline'; document.getElementById('MotherLocale').required = true;}else{document.getElementById('MLocaleDis').style.display = 'none'; document.getElementById('MotherLocale').required = false;}" required>
+                        <span id="MLocaleDis" style="display:none">
+                        <input id="MotherLocale" name="MotherLocale" type="text" placeholder="Locale" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
+                        </span>
                     </li>
                     <li>
-                        <input id="MotherAddress" name="MotherAddress" type="text" placeholder="Complete Address" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
+                        <input id="MotherAddress" name="MotherAddress" type="text" placeholder="Complete Address" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
                     </li>
                     <li>
-                        <input id="MotherOccupation" name="MotherOccupation" type="text" placeholder="Occupation" onkeypress="javascript:this.value=this.value.toUpperCase();" required>
+                        <input id="MotherOccupation" name="MotherOccupation" type="text" placeholder="Occupation" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
                         <input id="MotherWorkContactNo" name="MotherWorkContactNo" type="text" pattern="\d*" maxlength="11" placeholder="Work Contact No#" required>                    
                     </li>
                     <li>
-                        <input id="MotherWorkAddress" name="MotherWorkAddress" type="text" placeholder="Work Address" onkeypress="javascript:this.value=this.value.toUpperCase();" required>                    
+                        <input id="MotherWorkAddress" name="MotherWorkAddress" type="text" placeholder="Work Address" onkeyup="javascript:this.value=this.value.toUpperCase();" required>                    
                     </li>                    
                     <li class="submitton">
                     <button class="btn" type="submit" name="submit" name="action">Submit</button>
