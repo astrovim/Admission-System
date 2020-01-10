@@ -1,7 +1,13 @@
-CHANGES
+ADMISSION SYSTEM
 
----FIX: LRN errors STYLE: Parent's Locale
--changed LRN data type in Database to TEXT
--added EXAMSCHED on database
--added pattern on LRN input to only accept numeric values
--Locale on parent's section now appears when father/mother is INC
+a simple admission system where you can handle student registration, exam schedule, exam result, validation and manage those info.
+
+Prerequisites:
+needs PHP and MySQL server installed.
+
+Built using:
+-PHP
+-MySQL
+-HTML
+-CSS
+-JavaScript
