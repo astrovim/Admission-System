@@ -34,16 +34,17 @@ try {
 ?>
 
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <link rel="text/css" href="css/materialize.min.css" media="screen,projection">       
-    <link rel="stylesheet" href="regStyle.css" type="text/css" media="screen,projection">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>NEU-IS: Administrator</title>
+    <title>NEU Integrated School Admission</title>
     <link rel="neu icon" href="rsrc/neu_logo.png">
-    
-    <script type="text/javascript">
+    <link rel="stylesheet" type="text/css" href="StudentUIregStyle.css">  
+
+
+<script type="text/javascript">
 
 function regAppear(){
     var a=document.getElementById("level");
@@ -115,26 +116,10 @@ function PinoyCheck() {
 
 </head>
 <body>
-    <div class="main">
-        <div class="sidebar">
-            <div class="adminName">
-            <div><?php echo $adName; ?></div>
-                <div>Admin</div>
-            </div>            
-            <ul>
-                <li><a href="Curriculums.php">Curriculums</a></li>
-                <li><a href="Requirements.php">Requirements</a></li>
-                <li><a href="AdmissionSched.php">Admission Schedule</a></li>
-                <li><a href="Registration.php">Registration</a></li>
-                <li><a href="Validation.php">Validation</a></li>
-                <li><a href="StudInfoManagement.php">Student Info Management</a></li>
-                <li><a href="Logout.php">Logout</a></li>
-            </ul>
-        </div>
-        <div class="content">
-           <div class="header">Registration</div> 
-           <div class="">
-               <form action="Register.php" method="POST" onsubmit="return confirm('Are you sure you want to submit?')">
+
+<h1>Registration</h1>
+
+<form action="Register.php" method="POST" onsubmit="return confirm('Are you sure you want to submit?')">
                 <div>
                <select id="level" name="level" onchange="regAppear();" required>
                 <option value="default">--Select Education Level--</option>
@@ -284,9 +269,8 @@ function PinoyCheck() {
                     <input id="lastName" name="lastName" type="text" required>    
                 </div> -->
                </form>
-           </div>
-        </div>
-    </div>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+               <button class="btn" type="button" onclick="window.location.href = 'StudentUI.php';">BACK</button>
+    
 </body>
 </html>

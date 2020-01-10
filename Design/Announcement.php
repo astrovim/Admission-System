@@ -33,6 +33,7 @@ try {
         <script src="https://kit.fontawesome.com/65130005cf.js" crossorigin="anonymous"></script>
 
         <title>NEU Integrated School Admission</title>
+        <link rel="neu icon" href="rsrc/neu_logo.png">
     </head>
 
     <body>
@@ -59,10 +60,10 @@ try {
                   <a href="StudentUI.php">Home</a>
                 </li>
                  <li>
-                  <a href="#requirements">Requirements</a>
+                  <a href="StudentUIreq.php">Requirements</a>
                 </li>
                  <li>
-                  <a href="#registartion">Registration</a>
+                  <a href="StudentUIreg.php">Registration</a>
                 </li>
                  <li>
                   <a href="Announcement.php">Announcements</a>
@@ -80,7 +81,7 @@ try {
                   <a href="StudentUI.php">Home</a>
                 </li>
                  <li>
-                  <a href="#requirements">Requirements</a>
+                  <a href="StudentUIreq.php">Requirements</a>
                 </li>
                  <li>
                   <a href="#registartion">Registration</a>
