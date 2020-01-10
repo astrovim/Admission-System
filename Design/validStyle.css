@@ -1,0 +1,169 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.main{
+    display: flex;
+    position: relative;
+}
+
+.main .sidebar{
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background:  #2F4F4F;
+    padding: 30px 0;
+    overflow-y: auto;
+    top: 0;
+    bottom: 0;
+}
+
+.main .sidebar .adminName{
+    color: #fff;
+    margin-bottom: 100px;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.main .sidebar ul li{
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+
+.main .sidebar ul li a{
+    padding: 20px;
+    color: #DCDCDC;
+    display: block;
+}
+
+.main .sidebar ul li a:hover{
+    background: #A9A9A8;
+    color: #000;
+}
+
+.main .content {
+    width: 100%;
+    margin-left: 200px;
+}
+
+.main .content .header{
+    padding: 20px;
+    background: #2196f3;
+    color: #fff;
+    font-size: 50px;
+    font-family: Impact, Charcoal, sans-serif;
+    text-shadow: 3px 3px black;
+}
+
+li {
+    list-style-type: none;
+}
+
+select { 
+    margin: 25px;
+    appearance: none; 
+    outline: 0; 
+    background: whitesmoke; 
+    background-image: none; 
+    width: 40%;
+    min-width: 300px;
+    color: black; 
+    cursor: pointer; 
+    border:1px solid #2196f3;
+    font-size: 17px;
+    border-radius:5px; 
+    overflow: hidden;
+} 
+
+input[type="text"], input[type="number"] {
+    font-size: 17px;
+    line-height: 0.5;
+    padding: 2px;
+    margin-bottom: 10px;
+    margin-left: 25px;
+}
+
+input[type=date], input[type="radio"]{
+    font-size: 16px;
+    margin-left: 25px;
+}
+
+.categories {
+    margin-left: 25px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+li input[type="text"]{
+    border: 1px solid #2196f3;
+    border-radius: 5px;
+    width: 20%;
+    min-width: 225px;
+    max-width: 400px;
+    margin-right: 10px;
+}
+
+li input[type="text"]:focus{
+    border-bottom: 2px solid orange !important;
+}
+
+input[type="date"]{
+    border: 1px solid #2196f3;
+    border-radius: 5px;
+}
+
+::placeholder {
+    color: seagreen;
+}
+
+.parents {
+    margin-left: 25px;
+    margin-bottom: 5px;
+}
+
+.LastSchool input[type="text"]{
+    width: 20%;
+    min-width: 225px;
+    max-width: 400px;
+    margin-right: 10px;
+}
+
+#CompleteAddress, #LastSchoolAddress, #FatherAddress, #FatherWorkAddress, #MotherAddress, #MotherWorkAddress {
+    width: 43%;
+    min-width: 400px;
+    max-width: 700px;
+    margin-right: 10px;
+}
+
+.submitton {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.btn {
+    font-family: sans-serif;
+    width: 100px;
+    font-size: 20px;
+    color: black;
+    background-color: orange;
+}
+
+.religion {
+    margin-bottom: 5px;
+}
+
+.schoolYear input[type="number"]{
+    width: 75px;
+    min-width: 50px;
+}
+
+#toYear{
+    margin-left: 0;
+}

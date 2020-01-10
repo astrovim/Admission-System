@@ -1,0 +1,114 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.main{
+    display: flex;
+    position: relative;
+}
+
+.main .sidebar{
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background:  #2F4F4F;
+    padding: 30px 0;
+    overflow-y: auto;
+    top: 0;
+    bottom: 0;
+}
+
+.main .sidebar .adminName{
+    color: #fff;
+    margin-bottom: 100px;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.main .sidebar ul li{
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+
+.main .sidebar ul li a{
+    padding: 20px;
+    color: #DCDCDC;
+    display: block;
+}
+
+.main .sidebar ul li a:hover{
+    background: #A9A9A8;
+    color: #000;
+}
+
+.main .content {
+    width: 100%;
+    margin-left: 200px;
+}
+
+.main .content .header{
+    padding: 20px;
+    background: #2196f3;
+    color: #fff;
+    font-size: 50px;
+    font-family: Impact, Charcoal, sans-serif;
+    text-shadow: 3px 3px black;
+}
+
+.main .content .notice{
+    padding: 50px;
+    margin-left: 90px;
+    margin-right: 75px;
+    margin-top: 125px;
+    line-height: 25px;
+    background: #D3D3D3;
+    box-shadow: 7px 8px #2196f3;
+}
+
+#AnnounceArea{
+    size: 50%;
+    font-size: 30px;
+    margin-top: 100px;
+    margin-left: 200px;    
+}
+
+/* .Curr {
+    margin-top: 75px;
+    margin-left: 100px;
+    appearance: none;
+    outline: 0;
+    background: whitesmoke;
+    width: 40%;    
+    cursor: pointer;
+    border: 1px solid #2196f3;
+    border-radius: 5px;
+    overflow: hidden;
+} */
+
+select { 
+    margin: 25px;
+    appearance: none; 
+    outline: 0; 
+    background: whitesmoke; 
+    background-image: none; 
+    width: 40%; 
+    min-width: 300px;
+    color: black; 
+    cursor: pointer; 
+    border:1px solid #2196f3; 
+    border-radius:5px; 
+    font-size: 17px;
+    position: fixed;
+    overflow: hidden;
+} 
+
+#textValue {
+    margin-left: 25px;
+    margin-top: 75px;
+    width: 40%;
+}
